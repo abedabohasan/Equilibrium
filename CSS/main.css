@@ -1,0 +1,174 @@
+.main {
+    width: 1440px;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-areas: 
+    ". . . . . . . . . . ." 
+    ". . . . card card card . . . ."
+    ". . . . . . . . . . .";
+}
+
+.card {
+    grid-area: card;
+    background-color: hsl(216, 50%, 16%);
+    color: white;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto auto;
+    grid-template-areas: "image" "describtion" "creator";
+    padding: 25px;
+}
+
+.image {
+    grid-area: image;
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image:hover::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: cyan;
+    border-radius: 10px;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.eyeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative ;
+}
+
+.eyeContainer:hover {
+    cursor: pointer;
+    top: 3000px;
+}
+
+.eye {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    bottom: 3000px;
+}
+
+.describtion {
+    grid-area: describtion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "details" "ethAndDay";
+}
+
+h3 {
+    grid-area: header;
+    font-weight: 600;
+    margin-bottom: 0%;
+}
+
+h3:hover {
+    cursor: pointer;
+    color: cyan;
+}
+
+.describtion p {
+    grid-area: paragraph;
+    opacity: 50%;
+    font-weight: 300;
+    margin-bottom: 0%;
+}
+
+.ethAndDays {
+    grid-area: ethAndDay;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "eth days";
+    justify-content: space-between;
+    align-items: center;
+    margin: 0%; 
+    display: flex;
+    position: relative;
+}
+
+.ethAndDays p {
+    display: inline-block;
+}
+
+.ethAndDays img {
+    display: inline-block;
+}
+
+.eth {
+    grid-area: eth;
+    height: auto;
+    width: auto;
+    color:  hsl(178, 100%, 50%);
+}
+
+.eth p {
+    opacity: 100%;
+    font-weight: 600;
+    position: relative;
+    top: -2px;
+}
+
+.days {
+    grid-area: days;
+    height: auto;
+    width: auto;
+}
+
+.days p {
+    position: relative;
+    top: -2px;
+}
+
+.creator {
+    grid-area: creator;
+    width: 100%;
+}  
+
+hr {
+    opacity: 25%;
+}
+
+.creatorContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 300;
+}
+
+.creatorContainer img {
+    width: 10%;
+    height: 10%;
+    border: 2px solid hsl(0, 0%, 100%, .5);
+    border-radius: 50%;
+    margin: 15px;
+}
+.creationOf {
+    opacity: 50%;
+}
+
+.nameOfCreator:hover {
+    cursor: pointer;
+    color: cyan;
+}
