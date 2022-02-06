@@ -22,10 +22,10 @@
         }
 }
 
-@media (max-width: 829px) and (min-width: 376px) {
+@media (max-width: 415px) and (min-width: 376px) {
     .main {
-        width: 828px;
-        height: 1792px;
+        width: 414px;
+        height: 896px;
         grid-template-areas: 
         ". . . . . . . . . . . . . ." 
         ". .  card card card card card card card card card card . ."
