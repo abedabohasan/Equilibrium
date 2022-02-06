@@ -22,6 +22,17 @@
         }
 }
 
+@media (max-width: 829px) and (min-width: 376px) {
+    .main {
+        width: 828px;
+        height: 1792px;
+        grid-template-areas: 
+        ". . . . . . . . . . . . . ." 
+        ". .  card card card card card card card card card card . ."
+        ". . . . . . . . . . . . . .";
+        }
+}
+
 .card {
     grid-area: card;
     background-color: hsl(216, 50%, 16%);
