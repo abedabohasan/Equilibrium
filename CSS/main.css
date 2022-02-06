@@ -11,7 +11,10 @@
     ". . . . . . . . . . . . . .";
 }
 
-@media (max-width: 376px) {
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
     .main {
         width: 375px;
         height: 667px;
